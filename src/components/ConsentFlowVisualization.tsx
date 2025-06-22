@@ -1,5 +1,5 @@
 
-import { ArrowDown, ArrowUp, Shield, User, Database, Building, Eye, CheckCircle, XCircle } from "lucide-react";
+import { Shield, User, Database, Building, Eye, CheckCircle, XCircle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ConsentFlowVisualization = () => {
@@ -92,7 +92,7 @@ const ConsentFlowVisualization = () => {
           <div className="relative">
             {/* Flow Steps */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {flowSteps.map((step, index) => (
+              {flowSteps.map((step) => (
                 <div key={step.id} className="relative">
                   <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm">
                     <CardHeader className="text-center pb-4">
@@ -108,17 +108,6 @@ const ConsentFlowVisualization = () => {
                       <p className="text-gray-600 text-center text-sm">{step.description}</p>
                     </CardContent>
                   </Card>
-                  
-                  {/* Arrows between steps */}
-                  {index < flowSteps.length - 1 && (
-                    <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10">
-                      {index % 2 === 0 ? (
-                        <ArrowDown className="h-6 w-6 text-gray-400 rotate-90" />
-                      ) : (
-                        <ArrowUp className="h-6 w-6 text-gray-400 rotate-90" />
-                      )}
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
