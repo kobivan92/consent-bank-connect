@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,6 +6,7 @@ import { useSearchParams } from 'react-router-dom';
 import { toast } from "@/hooks/use-toast";
 import AuthModal from "@/components/AuthModal";
 import ConsentWaiting from "@/components/ConsentWaiting";
+import ConsentFlowVisualization from "@/components/ConsentFlowVisualization";
 
 const Index = () => {
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -153,6 +153,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* ConsentFlow Visualization */}
+      <ConsentFlowVisualization />
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
