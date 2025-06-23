@@ -91,14 +91,24 @@ const SolidPodInterface = () => {
                 <p className="text-sm text-emerald-600">Personal Data Vault</p>
               </div>
             </div>
-            <Button
-              variant="outline"
-              onClick={() => navigate('/')}
-              className="border-emerald-300 text-emerald-700 hover:bg-emerald-50"
-            >
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to SecureBank
-            </Button>
+            <div className="flex items-center space-x-3">
+              <Button
+                variant="outline"
+                onClick={() => navigate('/consent-management')}
+                className="border-emerald-300 text-emerald-700 hover:bg-emerald-50"
+              >
+                <Shield className="h-4 w-4 mr-2" />
+                Manage Consents
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => navigate('/')}
+                className="border-emerald-300 text-emerald-700 hover:bg-emerald-50"
+              >
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to SecureBank
+              </Button>
+            </div>
           </div>
         </div>
       </header>
